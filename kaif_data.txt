@@ -1,84 +1,273 @@
-9643820574----chacha death and critical pitch
-08351925580----critical pitch but call disconnect
-9927835103-----laps cb 6-7 clock	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sara ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-07004405437    parasmishra.jsr@gmail.com  ---mail kardo then check
+<div class="intro">
+  <h1 class="intro-text">For Someone Very Special ❤️</h1>
+</div>
 
+<div class="container">
 
-8898465352----woman  care p2p one  
+  <h1 class="name">Sara <span>urf Ahana</span> ❤️</h1>
 
+  <div id="wish" class="wish"></div>
 
+  <button class="start-btn" onclick="startLove()">Start Surprise ✨</button>
 
+  <div id="dua" class="dua"></div>
 
-Tarun singh 
-098269539645min basic 
- 09204252669 plan pich i month letter  
-09602064025 gumar singh 4 pm c
+  <div class="proposal" id="proposal">
+    <h2>Will You Be Mine Forever? 💍</h2>
+    <button class="yes" onclick="yesLove()">YES ❤️</button>
+    <button class="no" id="noBtn">NO 😅</button>
+  </div>
 
+</div>
 
+<canvas id="canvas"></canvas>
 
+<script src="script.js"></script>
+</body>
+</html>
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-09769576680---plan pich detail share
-------------------------------------------
-09970838604------12:00 CB FOR PLAN PICH--10 ko cb
---------------------------------------
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-------------------------------------------
-09158320046    Raju Gangadhar Shingare   8 days cb
-09769576680  .BHAGARAM RATNA----   2 DYAS CB
----------------------------------------------
+body{
+background:black;
+overflow:hidden;
+color:white;
+text-align:center;
+}
 
-09960880032----plan pich
+.intro{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+animation:fadeOut 3s forwards 3s;
+z-index:10;
+}
 
+@keyframes fadeOut{
+to{opacity:0;visibility:hidden;}
+}
 
-08766981166----kal cb 
+.container{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90%;
+}
 
-09860775864----diwali baad 
-09890955154-----some time call
+.name{
+font-size:3.5rem;
+text-shadow:0 0 20px #ff0080,0 0 60px #ff4da6;
+animation:pulse 2s infinite;
+}
 
-08928509475----bahahr hu 
-09891277173
+.name span{
+display:block;
+font-size:1.8rem;
+color:#ffb3d9;
+}
 
-09891277173 33,33,9  15650----discuss with family
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
 
+.wish{
+margin-top:20px;
+font-size:1.8rem;
+min-height:60px;
+color:#ffcce6;
+}
 
+.start-btn{
+margin-top:20px;
+padding:10px 30px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ff0080,#ff4d4d);
+color:white;
+cursor:pointer;
+font-size:1.1rem;
+transition:.3s;
+}
 
-09821620388---	
-09860519638----RIGHT NOW DRIVE
-07083805094---AFTER 2:00 CB
-09833056804---1:00 CB
+.start-btn:hover{transform:scale(1.1);}
 
-08793961890---BRAIN HIAMRAGDE CUSTOMER POLICY
-07083390789-----CALL 2 DAYS PARENTS POLICY 1978,1968 MCI-product
+.dua{
+margin-top:25px;
+font-size:1.2rem;
+white-space:pre-line;
+min-height:100px;
+}
 
-9818586807-----6:55pm cb
+.proposal{
+margin-top:30px;
+display:none;
+}
 
--------------------------------
-deepak   
-4301
-9607369265
-  cb 2 days p2p
-----------------------------------
-9029228279 .MANISH SINGH
-401209   42,40,19,15  28000RUPE  p2p today
-------------------------------------
+.proposal h2{
+margin-bottom:15px;
+}
 
-09552918392---12:21 cb 
-08655730854---2:00 cb for critical policy
+.yes,.no{
+padding:10px 25px;
+margin:10px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+font-size:1rem;
+}
 
+.yes{
+background:#ff0080;
+color:white;
+}
 
+.no{
+background:#444;
+color:white;
+position:relative;
+}
 
-VIVEK JAYVANT DALVI
-416534
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
 
+@media(max-width:768px){
+.name{font-size:2.3rem;}
+.wish{font-size:1.2rem;}
+}
 
-08377897892-----2:00
+const wish = document.getElementById("wish");
+const duaBox = document.getElementById("dua");
+const proposal = document.getElementById("proposal");
+const noBtn = document.getElementById("noBtn");
 
-09970660504-----3:00 cb for policy
+/* Wish Animation */
 
-09479579576----kal cb for policy
+setTimeout(()=>{
+wish.innerHTML="🎂 Happy Birthday My Love ❤️";
+},4000);
 
------------------------------------------
-9259634510  rajesh kumar---kal p2p 
------------------------------------------
+setTimeout(()=>{
+wish.innerHTML+="<br>💖 Valentine Mubarak 💖";
+},7000);
+
+/* Start Surprise */
+
+function startLove(){
+typeText("Dear Sara urf Ahana ❤️\n\nAllah tumhe har khushi de.\nTumhari zindagi roshan rahe.\nTum meri dua ho.\n\n– Mohd Kaif ❤️");
+launchHearts();
+setTimeout(()=>proposal.style.display="block",5000);
+}
+
+/* Typing Effect */
+
+function typeText(text){
+duaBox.innerHTML="";
+let i=0;
+function typing(){
+if(i<text.length){
+duaBox.innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,40);
+}
+}
+typing();
+}
+
+/* Moving NO Button */
+
+noBtn.addEventListener("mouseover",()=>{
+let x=Math.random()*200-100;
+let y=Math.random()*200-100;
+noBtn.style.transform=`translate(${x}px,${y}px)`;
+});
+
+/* YES Button */
+
+function yesLove(){
+launchFireworks();
+alert("Yayyy ❤️ Mohd Kaif Loves You Forever 💍✨");
+}
+
+/* Heart Rain */
+
+function launchHearts(){
+for(let i=0;i<40;i++){
+let heart=document.createElement("div");
+heart.innerHTML="❤️";
+heart.style.position="fixed";
+heart.style.left=Math.random()*100+"vw";
+heart.style.top=Math.random()*100+"vh";
+heart.style.fontSize="20px";
+heart.style.animation="float 3s linear forwards";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),3000);
+}
+}
+
+/* Fireworks */
+
+const canvas=document.getElementById("canvas");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+function launchFireworks(){
+for(let i=0;i<150;i++){
+particles.push({
+x:canvas.width/2,
+y:canvas.height/2,
+radius:Math.random()*3,
+color:`hsl(${Math.random()*360},100%,50%)`,
+speedX:(Math.random()-0.5)*8,
+speedY:(Math.random()-0.5)*8
+});
+}
+}
+
+function animate(){
+ctx.fillStyle="rgba(0,0,0,0.2)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+particles.forEach((p,index)=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+ctx.fillStyle=p.color;
+ctx.fill();
+p.x+=p.speedX;
+p.y+=p.speedY;
+if(p.radius>0.1)p.radius-=0.02;
+if(p.radius<=0.1)particles.splice(index,1);
+});
+
+requestAnimationFrame(animate);
+}
+
+animate();
